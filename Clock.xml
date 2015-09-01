@@ -58,6 +58,15 @@
                         </value>
                       </block>
                     </value>
+                    <next>
+                      <block type="robot_delay" id="69" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="70">
+                            <field name="NUM">1000</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
                   </block>
                 </statement>
                 <statement name="ELSE">

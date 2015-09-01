@@ -58,6 +58,37 @@
                         </value>
                       </block>
                     </value>
+                    <next>
+                      <block type="controls_if" id="148" inline="false">
+                        <value name="IF0">
+                          <block type="logic_negate" id="149" inline="true">
+                            <value name="NUMBER">
+                              <block type="sensor_button" id="150">
+                                <field name="OBJECT">RIGHT</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="controls_repeat" id="151" inline="true">
+                            <value name="TIMES">
+                              <block type="math_number" id="152">
+                                <field name="NUM">100</field>
+                              </block>
+                            </value>
+                            <statement name="DO">
+                              <block type="robot_delay" id="153" inline="true">
+                                <value name="DELAY">
+                                  <block type="math_number" id="154">
+                                    <field name="NUM">10</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
                   </block>
                 </statement>
                 <statement name="ELSE">

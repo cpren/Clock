@@ -1,67 +1,77 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="7" inline="false" x="84" y="78">
-    <field name="MODE">WHILE</field>
-    <value name="NUMBER">
-      <block type="logic_compare" id="88" inline="true">
-        <field name="OP">LT</field>
-        <value name="A">
-          <block type="variables_get" id="92">
-            <field name="VAR">seccount</field>
-          </block>
-        </value>
-        <value name="B">
-          <block type="math_number" id="99">
-            <field name="NUM">10</field>
-          </block>
-        </value>
+  <block type="variables_set" id="103" inline="true" x="97" y="39">
+    <field name="VAR">seccount</field>
+    <value name="VALUE">
+      <block type="math_number" id="110">
+        <field name="NUM">0</field>
       </block>
     </value>
-    <statement name="DO">
-      <block type="robot_delay" id="9" inline="true">
-        <value name="DELAY">
-          <block type="math_number" id="16">
-            <field name="NUM">1000</field>
+    <next>
+      <block type="controls_whileUntil" id="7" inline="false">
+        <field name="MODE">WHILE</field>
+        <value name="NUMBER">
+          <block type="logic_compare" id="88" inline="true">
+            <field name="OP">LT</field>
+            <value name="A">
+              <block type="variables_get" id="92">
+                <field name="VAR">seccount</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="99">
+                <field name="NUM">10</field>
+              </block>
+            </value>
           </block>
         </value>
-        <next>
-          <block type="variables_set" id="18" inline="true">
-            <field name="VAR">seccount</field>
-            <value name="VALUE">
-              <block type="math_arithmetic" id="38" inline="true">
-                <field name="OP">ADD</field>
-                <value name="A">
-                  <block type="variables_get" id="42">
-                    <field name="VAR">seccount</field>
-                  </block>
-                </value>
-                <value name="B">
-                  <block type="math_number" id="25">
-                    <field name="NUM">1</field>
-                  </block>
-                </value>
+        <statement name="DO">
+          <block type="robot_delay" id="9" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="16">
+                <field name="NUM">1000</field>
               </block>
             </value>
             <next>
-              <block type="oled_cleardisplay" id="51">
+              <block type="variables_set" id="18" inline="true">
+                <field name="VAR">seccount</field>
+                <value name="VALUE">
+                  <block type="math_arithmetic" id="38" inline="true">
+                    <field name="OP">ADD</field>
+                    <value name="A">
+                      <block type="variables_get" id="42">
+                        <field name="VAR">seccount</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="25">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
                 <next>
-                  <block type="oled_setcursor" id="60" inline="true">
-                    <value name="STARTX">
-                      <block type="math_number" id="67">
-                        <field name="NUM">10</field>
-                      </block>
-                    </value>
-                    <value name="STARTY">
-                      <block type="math_number" id="68">
-                        <field name="NUM">10</field>
-                      </block>
-                    </value>
+                  <block type="oled_cleardisplay" id="51">
                     <next>
-                      <block type="oled_drawnumber" id="77" inline="true">
-                        <value name="NUMBER">
-                          <block type="variables_get" id="81">
-                            <field name="VAR">seccount</field>
+                      <block type="oled_setcursor" id="60" inline="true">
+                        <value name="STARTX">
+                          <block type="math_number" id="67">
+                            <field name="NUM">10</field>
                           </block>
                         </value>
+                        <value name="STARTY">
+                          <block type="math_number" id="68">
+                            <field name="NUM">10</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="oled_drawnumber" id="77" inline="true">
+                            <value name="NUMBER">
+                              <block type="variables_get" id="81">
+                                <field name="VAR">seccount</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
                       </block>
                     </next>
                   </block>
@@ -69,8 +79,8 @@
               </block>
             </next>
           </block>
-        </next>
+        </statement>
       </block>
-    </statement>
+    </next>
   </block>
 </xml>

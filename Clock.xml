@@ -34,7 +34,7 @@
             </value>
             <statement name="DO">
               <block type="controls_if" id="21" inline="false">
-                <mutation elseif="1"></mutation>
+                <mutation else="1"></mutation>
                 <value name="IF0">
                   <block type="sensor_button" id="22">
                     <field name="OBJECT">RIGHT</field>
@@ -69,22 +69,35 @@
                     </next>
                   </block>
                 </statement>
-                <value name="IF1">
-                  <block type="logic_negate" id="88" inline="true">
-                    <value name="NUMBER">
-                      <block type="sensor_button" id="95">
-                        <field name="OBJECT">RIGHT</field>
+                <statement name="ELSE">
+                  <block type="controls_if" id="107" inline="false">
+                    <value name="IF0">
+                      <block type="logic_negate" id="114" inline="true">
+                        <value name="NUMBER">
+                          <block type="sensor_button" id="129">
+                            <field name="OBJECT">RIGHT</field>
+                          </block>
+                        </value>
                       </block>
                     </value>
-                  </block>
-                </value>
-                <statement name="DO1">
-                  <block type="robot_delay" id="19" inline="true">
-                    <value name="DELAY">
-                      <block type="math_number" id="20">
-                        <field name="NUM">1000</field>
+                    <statement name="DO0">
+                      <block type="controls_repeat" id="136" inline="true">
+                        <value name="TIMES">
+                          <block type="math_number" id="143">
+                            <field name="NUM">100</field>
+                          </block>
+                        </value>
+                        <statement name="DO">
+                          <block type="robot_delay" id="19" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="20">
+                                <field name="NUM">10</field>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
                       </block>
-                    </value>
+                    </statement>
                   </block>
                 </statement>
                 <next>
